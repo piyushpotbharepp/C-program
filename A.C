@@ -1,45 +1,25 @@
-// Write a C program to perform arithmetic operations
+// Print Elements in the Array as it is by one Dimentional Array
 
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 
 void main()
 {
-int a,b,r;
-char choice;
+int a[5],i;
 clrscr();
-printf(" Press 1 for Addition\n Press 2 for subtraction\n Press 3 for Multiplication\n Press 4 for division\n Enter Choice...!");
-scanf("%d", &choice);
 
-switch(choice)
+printf("Enter Elements in the Array");
+
+for(i=0;i<=4;i++)
 {
-	case 1:
-		printf(" Enter Two Numbers For Addition :\n");
-		scanf("%d%d",&a,&b);
-		r=a+b;
-		printf("Addition of two numbers is : %d",r);
-		break;
-	case 2:
-		printf("Enter Two Numbers For Subtraction :\n");
-		scanf("%d%d",&a,&b);
-		r=a-b;
-		printf("Subtraction of two numbers is : %d",r);
-		break;
-	case 3:
-		printf("Enter Two Numbers For Multiplication :\n");
-		scanf("%d%d",&a,&b);
-		r=a*b;
-		printf("Multiplication of two numbers is : %d",r);
-		break;
-	case 4:
-		printf("Enter Two Numbers For Division :\n");
-		scanf("%d%d",&a,&b);
-		r=a/b;
-		printf("Division of two numbers is : %d",r);
-		break;
-	default:
-		printf("Invalid Choice");
+	scanf("%d",&a[i]);
+}
+
+printf("Array Elements: ");
+
+for(i=0;i<=4;i++)
+{
+	printf("%d",a[i]);
 }
 getch();
 }
-
