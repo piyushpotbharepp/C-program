@@ -1,6 +1,6 @@
 /*
-You are given an array  of  elements. 
-Now you need to choose the best index of this array . 
+You are given an array A of N elements. 
+Now you need to choose the best index of this array A. 
 An index of the array is called best if the special 
 sum of this index is maximum across the special 
 sum of all the other indices.
