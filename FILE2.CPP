@@ -1,27 +1,38 @@
-/*Income Tax Calculation using code.
+/* 
+Write a program that generates a random number and ask the player to guess it.
+If the player guess is higher than the actual number the program will print
+"Lower number please". Similarly if the uer guess is too low, the program prints
+"Higher number please"
+When the user guesses the correct number, the program displays the number of 
+guesses the player used to arrive at the number
 */
 
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
 
-int main(){
-float income, tax = 0;
-
-printf("Enter Your Income :\n");
-scanf("%f", &income);
-
-if(income>=250000 && income<=500000)
-{
-    tax=tax+0.05*(income-250000);
-}
-if(income>=500000 && income<=1000000)
-{
-    tax=tax+0.20*(income-500000);
-}
-if(income>=1000000)
-{
-    tax=tax+0.30*(income-1000000);
-}
-pr9intf("Your net income tax to be paid is %f\n", tax);
-return 0;
+int main() {
+    int number,guess,nguess;
+    srand(time(0));
+    number = rand()%100+1;
+    
+    do{
+        printf("\nPlease guess the number between 0 to 100\n");
+        scanf("%d", &guess);
+        
+        if(guess>number)
+        {
+            printf("\nLower number please");
+        }
+        else if(guess<number)
+        {
+            printf("\nHigher number please");
+        }
+        else{
+            printf("\nYou guessed it in %d attempts", nguess);
+        }
+        nguess++;
+    }while(guess!=number);
+    
+    return 0;
 }
