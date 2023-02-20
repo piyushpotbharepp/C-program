@@ -1,38 +1,32 @@
 /* 
-Write a program that generates a random number and ask the player to guess it.
-If the player guess is higher than the actual number the program will print
-"Lower number please". Similarly if the uer guess is too low, the program prints
-"Higher number please"
-When the user guesses the correct number, the program displays the number of 
-guesses the player used to arrive at the number
+Write a program with three functions
+1] Good Morning Function which prints "Good Morning"
+2] Good Afternoon Function which prints "Good Afternoon"
+3] Good Night Function which prints "Good Night"
 */
 
 #include <stdio.h>
-#include<stdlib.h>
-#include<time.h>
+
+void Morning();
+void Afternoon();
+void Night(); 
 
 int main() {
-    int number,guess,nguess;
-    srand(time(0));
-    number = rand()%100+1;
-    
-    do{
-        printf("\nPlease guess the number between 0 to 100\n");
-        scanf("%d", &guess);
-        
-        if(guess>number)
-        {
-            printf("\nLower number please");
-        }
-        else if(guess<number)
-        {
-            printf("\nHigher number please");
-        }
-        else{
-            printf("\nYou guessed it in %d attempts", nguess);
-        }
-        nguess++;
-    }while(guess!=number);
-    
+    printf("Hey Welcome");
+    Morning();
+    Afternoon();
+    Night();
     return 0;
 }
+
+void Morning(){
+    printf("\nGood Morning");
+}
+
+void Afternoon(){
+    printf("\nGood Afternoon");
+}
+
+void Night(){
+    printf("\nGood Night");
+} 
